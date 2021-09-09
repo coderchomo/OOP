@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+class Phone{
+    constructor(id,name) {
+        this.id=id;
+        this.name=name;
+        this.message="";
+        }
+    setMessage(message){
+        this.message=message;
+    }
+    getMessage(){
+        return this.message;
+    }
+    sendMessage(message,phone){
+        phone.setMessage(message);
+    }
+}
+let iphone=new Phone(1,"iphone");
+let android=new Phone(2,"samsung");
+let xperia=new Phone(3,"Nokia");
+iphone.sendMessage("aladin",android);
+iphone.sendMessage("Don Pacho",xperia);
+let message=android.getMessage();
+let bulagu=xperia.getMessage();
+console.log(message);
+console.log(bulagu);
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Rat{
+        constructor(name,weight,speed,status) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+            this.status=status;
+        }
+        toSay(string){
+            document.write("Rat say "+string+"<br>");
+        }
+    }
+    class Cat{
+        constructor(name,weight,speed) {
+            this.name=name;
+            this.weight=weight;
+            this.speed=speed;
+        }
+        toSay(voice){
+            document.write("Cat say: "+voice+"<br>");
+        }
+        catchRat(rat){
+            if(this.speed>rat.speed) return true;
+        }
+        eatRat(rat){
+            if(rat.status=true){
+                rat.status=false;
+                this.weight+=rat.weight;
+            }
+        }
+    }
+    let tom=new Cat("Tom Holland",20,30);
+    let jerry=new Rat("Jerry",5,10,true);
+    tom.toSay("How u doing?");
+    jerry.toSay("Dont ask cause we not friend!");
+    tom.toSay("I'm thought we are bro");
+    jerry.toSay("No bullshit bjtch");
+    tom.toSay("I'm angry now!");
+    tom.catchRat(jerry);
+    tom.eatRat(jerry);
+    document.write("Poor Jerry. His status is "+jerry.status);
+    document.write("Tom Holland eat jerry.Now his weight is "+tom.weight);
+</script>
+</body>
+</html>

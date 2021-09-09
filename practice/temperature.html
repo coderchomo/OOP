@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class temperature{
+        constructor(celsius) {
+            this.celsius=celsius;
+        }
+        toFahrenheit(){
+            return (9/5*this.celsius+32);
+        }
+        toKelvin(){
+            return (this.celsius+273,15);
+        }
+    }
+    let checkCelsius=new temperature(25);
+    document.write("With "+checkCelsius.celsius+"celsius we have " +checkCelsius.toFahrenheit()+" Fahrentheit"+"<br>");
+    document.write("With "+checkCelsius.celsius+"celsius we have " +checkCelsius.toKelvin()+" Kelvin");
+</script>
+</body>
+</html>
